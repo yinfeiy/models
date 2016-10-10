@@ -33,7 +33,8 @@ def lenet(images, num_classes=10, is_training=False,
   interval of (-infinity, infinity). Consequently, to convert the outputs to a
   probability distribution over the characters, one will need to convert them
   using the softmax function:
-        logits = mnist.Mnist(images, is_training=False)
+
+        logits = lenet.lenet(images, is_training=False)
         probabilities = tf.nn.softmax(logits)
         predictions = tf.argmax(logits, 1)
 
